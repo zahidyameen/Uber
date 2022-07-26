@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/QR_Scanner/Uber/app/src/main/res/drawable/ic_add_circle.xml" value="0.2085" />
+        <entry key="..\:/QR_Scanner/Uber/app/src/main/res/drawable/ic_amex.xml" value="0.222" />
+        <entry key="..\:/QR_Scanner/Uber/app/src/main/res/layout/activity_add_payment.xml" value="0.20104166666666667" />
+        <entry key="..\:/QR_Scanner/Uber/app/src/main/res/layout/activity_costumer_content.xml" value="0.23020833333333332" />
+        <entry key="..\:/QR_Scanner/Uber/app/src/main/res/layout/activity_map_customer.xml" value="0.23020833333333332" />
+        <entry key="..\:/QR_Scanner/Uber/app/src/main/res/menu/main.xml" value="0.20104166666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
