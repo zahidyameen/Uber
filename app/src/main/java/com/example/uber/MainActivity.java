@@ -9,6 +9,7 @@ import com.example.uber.Customer.CustomerMapActivity;
 import com.example.uber.Driver.DriverMapActivity;
 import com.example.uber.Login.AuthenticationActivity;
 import com.example.uber.Login.DetailsActivity;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        FirebaseApp.initializeApp(this);
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         if (mAuth.getCurrentUser() != null) {
             checkUserAccType();

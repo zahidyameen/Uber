@@ -1,6 +1,7 @@
 package com.example.uber.Driver;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -812,12 +813,14 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
         }
     }
 
+    @SuppressLint("MissingPermission")
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == 1) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
                     mFusedLocationClient.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
                     mMap.setMyLocationEnabled(true);
                 }
@@ -841,6 +844,7 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
     /**
      * Connects driver, waking up the code that fetches current location
      */
+    @SuppressLint("MissingPermission")
     private void connectDriver() {
         mWorkingSwitch.setChecked(true);
         checkLocationPermission();

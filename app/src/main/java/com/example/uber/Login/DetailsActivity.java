@@ -8,6 +8,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.addisonelliott.segmentedbutton.SegmentedButtonGroup;
 import com.example.uber.MainActivity;
 import com.example.uber.R;
 import com.google.android.gms.tasks.OnCompleteListener;

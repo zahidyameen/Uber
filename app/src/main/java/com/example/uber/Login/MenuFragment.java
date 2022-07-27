@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+
 import com.example.uber.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -69,7 +70,6 @@ public class MenuFragment extends Fragment implements View.OnClickListener, Goog
                     .build();
 
             mGoogleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
-
 
         }
 

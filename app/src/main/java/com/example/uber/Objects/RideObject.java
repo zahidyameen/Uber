@@ -15,16 +15,15 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.uber.R;
+import com.example.uber.Utils.SendNotification;
+import com.example.uber.Utils.Utils;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ServerValue;
-import com.simcoder.uber.R;
-import com.simcoder.uber.Utils.SendNotification;
-import com.simcoder.uber.Utils.Utils;
-
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;

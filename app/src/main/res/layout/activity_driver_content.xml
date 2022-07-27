@@ -188,12 +188,15 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </RelativeLayout>
+
+        <com.lorentzos.flingswipe.SwipeFlingAdapterView
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_anchor="@+id/map"
+            app:layout_anchorGravity="center"
+            app:rotation_degrees="5" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    <com.lorentzos.flingswipe.SwipeFlingAdapterView
-        android:id="@+id/frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:rotation_degrees="5" />
 </FrameLayout>
 

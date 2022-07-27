@@ -13,18 +13,38 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Uber"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+        <activity android:name="com.example.uber.Driver.DriverChooseTypeActivity" />
+        <activity android:name="com.example.uber.Payment.PaymentActivity" />
+        <activity android:name="com.example.uber.Payment.PayoutActivity" />
+        <activity android:name="com.example.uber.Payment.AddPaymentActivity" />
+        <activity android:name="com.example.uber.Login.DetailsActivity" />
         <activity
-            android:name=".DetailsActivity"
-            android:exported="false" />
+            android:name="com.example.uber.Login.AuthenticationActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".DriverMapActivity"
-            android:exported="false" />
+            android:name="com.example.uber.Customer.CustomerMapActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".CustomerMapActivity"
-            android:exported="false" />
+            android:name="com.example.uber.Customer.CustomerSettingsActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".Login.AuthenticationActivity"
-            android:exported="false" />
+            android:name="com.example.uber.Driver.DriverSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.uber.History.HistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.uber.History.HistorySingleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.uber.Driver.DriverMapActivity"
+            android:screenOrientation="portrait"
+             />
+
+        <service android:name="com.example.uber.Utils.onAppKilled" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

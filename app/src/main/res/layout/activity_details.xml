@@ -19,12 +19,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
+            android:foregroundTint="@color/white"
             android:drawablePadding="5sp"
             android:drawableStart="@drawable/ic_person_black_24dp"
             android:hint="@string/name"
             android:id="@+id/name"
             android:inputType="textEmailAddress"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
