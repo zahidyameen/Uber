@@ -5,55 +5,51 @@
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Uber"
-        tools:targetApi="31">
+        android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
-        <activity android:name="com.example.uber.Driver.DriverChooseTypeActivity" />
-        <activity android:name="com.example.uber.Payment.PaymentActivity" />
-        <activity android:name="com.example.uber.Payment.PayoutActivity" />
-        <activity android:name="com.example.uber.Payment.AddPaymentActivity" />
-        <activity android:name="com.example.uber.Login.DetailsActivity" />
-        <activity
-            android:name="com.example.uber.Login.AuthenticationActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.uber.Customer.CustomerMapActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.uber.Customer.CustomerSettingsActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.uber.Driver.DriverSettingsActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.uber.History.HistoryActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.uber.History.HistorySingleActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.uber.Driver.DriverMapActivity"
-            android:screenOrientation="portrait"
-             />
 
-        <service android:name="com.example.uber.Utils.onAppKilled" />
         <activity
-            android:name=".MainActivity"
+            android:name=".RequestDriver"
+            android:label="@string/title_activity_request_driver">
+
+        </activity>
+        <activity
+            android:name=".RiderHome"
+            android:label="@string/title_activity_rider_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DriverHome"
+            android:label="@string/title_activity_driver_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".registerUser" />
+        <activity android:name=".registerDriver" />
+        <activity android:name=".SplashActivity"
             android:exported="true">
+
+            <!-- android:theme="@style/SplashTheme"> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service android:name=".Services.MessagingServices"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
